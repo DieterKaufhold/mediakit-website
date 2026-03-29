@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BizTrafo - Agile Transformation in the Age of AI</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <nav class="nav">
+            <div class="nav-brand">
+                <span class="logo">BizTrafo</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hero-content">
+            <h1>Agile Transformation<br>in the Age of AI</h1>
+            <p class="hero-subtitle">Navigate the intersection of agile methodologies and artificial intelligence to drive meaningful organizational change.</p>
+            <button class="cta-button" onclick="chatWidget.open()">Ask Our Expert Bot</button>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2>Why BizTrafo?</h2>
+            <p class="section-intro">Organizations today face a dual challenge: adopting agile ways of working while integrating AI into their processes. We help you navigate both.</p>
+            <div class="grid-3">
+                <div class="card">
+                    <div class="card-icon">&#9670;</div>
+                    <h3>AI-Driven Agility</h3>
+                    <p>Leverage artificial intelligence to accelerate your agile transformation and make data-informed decisions at every level.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">&#9671;</div>
+                    <h3>Proven Frameworks</h3>
+                    <p>From Scrum to SAFe, we apply battle-tested methodologies tailored to your organization's unique context.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">&#9672;</div>
+                    <h3>Lasting Change</h3>
+                    <p>Real transformation goes beyond tools and processes. We focus on culture, mindset, and sustainable growth.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section section-alt">
+        <div class="container">
+            <h2>Our Expertise</h2>
+            <div class="grid-2">
+                <div class="service-card">
+                    <h3>Scrum &amp; Agile Coaching</h3>
+                    <p>Hands-on coaching for teams adopting Scrum, Kanban, and other agile practices. We help teams become self-organizing and high-performing.</p>
+                </div>
+                <div class="service-card">
+                    <h3>SAFe Implementation</h3>
+                    <p>Scale agile across your enterprise with the Scaled Agile Framework. From portfolio to team level, we guide the full journey.</p>
+                </div>
+                <div class="service-card">
+                    <h3>AI Strategy &amp; Integration</h3>
+                    <p>Understand how AI can enhance your workflows, automate repetitive tasks, and augment decision-making across your organization.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Transformation Leadership</h3>
+                    <p>Change is hard. We support leaders in creating the conditions for successful, lasting organizational transformation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container center">
+            <h2>Get in Touch</h2>
+            <p class="section-intro">Have a question about agile transformation or AI? Start a conversation with our chatbot or reach out directly.</p>
+            <button class="cta-button" onclick="chatWidget.open()">Chat With Us</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 BizTrafo. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Chatbot Widget -->
+    <div id="chat-widget" class="chat-widget">
+        <div class="chat-window" id="chat-window">
+            <div class="chat-header">
+                <div class="chat-header-info">
+                    <div class="chat-avatar">BT</div>
+                    <div>
+                        <div class="chat-header-title">BizTrafo Assistant</div>
+                        <div class="chat-header-status">Online</div>
+                    </div>
+                </div>
+                <button class="chat-close" onclick="chatWidget.close()" aria-label="Close chat">&times;</button>
+            </div>
+            <div class="chat-messages" id="chat-messages"></div>
+            <div class="chat-suggestions" id="chat-suggestions">
+                <button class="suggestion-chip" onclick="chatWidget.sendSuggestion(this)">How can AI help my team?</button>
+                <button class="suggestion-chip" onclick="chatWidget.sendSuggestion(this)">What is Scrum?</button>
+                <button class="suggestion-chip" onclick="chatWidget.sendSuggestion(this)">Tell me about SAFe</button>
+                <button class="suggestion-chip" onclick="chatWidget.sendSuggestion(this)">How do transformations work?</button>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="chat-input" class="chat-input" placeholder="Type your question..." autocomplete="off">
+                <button class="chat-send" id="chat-send" aria-label="Send message">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <button class="chat-toggle" id="chat-toggle" onclick="chatWidget.toggle()" aria-label="Open chat">
+            <svg class="chat-icon-open" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+            <svg class="chat-icon-close" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+            <span class="chat-badge" id="chat-badge">1</span>
+        </button>
+    </div>
+
+    <script src="js/knowledge-base.js"></script>
+    <script src="js/chatbot.js"></script>
+</body>
+</html>
