@@ -257,6 +257,7 @@
       align-items: center;
       justify-content: center;
       z-index: 2147483646;
+      pointer-events: auto;
       transition: transform 0.3s cubic-bezier(.4,0,.2,1), box-shadow 0.3s ease;
     }
     .bt-bubble:hover {
